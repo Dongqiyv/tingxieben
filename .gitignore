@@ -1,0 +1,18 @@
+# Licensed study materials and private learning records
+/audio/
+/data/
+/app/catalog.json
+/app/alignment.json
+/app/variants.json
+/config.json
+
+# Local build products and restored third-party binaries
+/*.exe
+/*.dll
+/*.nupkg
+/WebView2-LICENSE.txt
+/dist/
+/packages/
+*.user
+*.bak
+*.tmp

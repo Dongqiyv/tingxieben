@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src https://corpus-audio.test; connect-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>听写本</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#library" aria-label="听写本首页"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>听写本<small>LISTEN · WRITE · REMEMBER</small></span></a>
+    <div class="nav-caption">我的练习</div>
+    <nav id="navigation">
+      <button data-page="library" class="nav-item active"><span class="nav-icon">▤</span>听写练习<span class="nav-arrow">›</span></button>
+      <button data-page="history" class="nav-item"><span class="nav-icon">◷</span>听写记录<span class="nav-count" id="batch-count">0</span></button>
+      <button data-page="review" class="nav-item"><span class="nav-icon">◇</span>错词背诵<span class="nav-dot" id="review-dot" hidden></span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="local-note"><span class="status-dot"></span>学习记录保存在本机</div><button data-page="settings" class="nav-item"><span class="nav-icon">⚙</span>设置与备份</button><div class="sidebar-version">听写本 1.0 <span>离线使用</span></div></div>
+  </aside>
+  <main id="main" tabindex="-1"><div class="loading"><span class="spinner"></span>正在打开你的听写本…</div></main>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <audio id="audio" preload="metadata"></audio>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
